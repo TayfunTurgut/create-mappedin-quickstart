@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here.
 
+## 0.1.2
+
+- Docs: README quick-start commands now use `@latest` so users (and the npm
+  package page) always reference the current release instead of a cached
+  version.
+
 ## 0.1.1
 
 - Fix: a project name passed on the command line
