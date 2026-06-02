@@ -8,16 +8,16 @@ Template source: [MappedIn/mappedin-js-quickstart](https://github.com/MappedIn/m
 
 ```bash
 # npm
-npm create mappedin-quickstart my-project
+npm create mappedin-quickstart@latest my-project
 
 # yarn
-yarn create mappedin-quickstart my-project
+yarn create mappedin-quickstart@latest my-project
 
 # pnpm
-pnpm create mappedin-quickstart my-project
+pnpm create mappedin-quickstart@latest my-project
 
 # bun
-bun create mappedin-quickstart my-project
+bun create mappedin-quickstart@latest my-project
 ```
 
 Then:
