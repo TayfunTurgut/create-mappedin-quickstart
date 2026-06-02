@@ -1,0 +1,57 @@
+{
+  "name": "create-mappedin-quickstart",
+  "version": "0.1.0",
+  "description": "Scaffold a Mappedin JS indoor mapping project in one command. Unofficial community tool — pulls from the official MappedIn/mappedin-js-quickstart repo.",
+  "type": "module",
+  "bin": {
+    "create-mappedin-quickstart": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "create",
+    "mappedin",
+    "indoor-mapping",
+    "scaffold",
+    "quickstart",
+    "vite",
+    "typescript"
+  ],
+  "author": "Tayfun Turgut <tyfn.trgt@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TayfunTurgut/create-mappedin-quickstart"
+  },
+  "homepage": "https://github.com/TayfunTurgut/create-mappedin-quickstart#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@clack/prompts": "1.5.0",
+    "giget": "3.2.0",
+    "picocolors": "1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.1",
+    "eslint": "10.4.1",
+    "tsup": "8.5.1",
+    "typescript": "6.0.3",
+    "vitest": "4.1.8"
+  }
+}

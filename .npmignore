@@ -1,0 +1,12 @@
+src/
+tests/
+.serena/
+tsconfig.json
+tsup.config.ts
+.eslintrc.*
+.npmrc
+vitest.config.*
+node_modules/
+*.test.ts
+.env
+.env.example
