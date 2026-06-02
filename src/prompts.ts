@@ -35,12 +35,15 @@ export async function gatherChoices(defaults: {
   const result = await p.group(
     {
       projectName: () =>
-        p.text({
-          message: "What is your project name?",
-          placeholder: "my-mappedin-app",
-          defaultValue: defaults.projectName ?? "my-mappedin-app",
-          validate: (value) => validateProjectName(value ?? ""),
-        }),
+        // A valid name passed on the command line is used as-is — don't prompt.
+        defaults.projectName && !validateProjectName(defaults.projectName)
+          ? Promise.resolve(defaults.projectName)
+          : p.text({
+              message: "What is your project name?",
+              placeholder: "my-mappedin-app",
+              defaultValue: defaults.projectName ?? "my-mappedin-app",
+              validate: (value) => validateProjectName(value ?? ""),
+            }),
 
       packageManager: () =>
         p.select({

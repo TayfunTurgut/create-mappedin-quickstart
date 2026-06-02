@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here.
 
+## 0.1.1
+
+- Fix: a project name passed on the command line
+  (`npm create mappedin-quickstart my-project`) is now used directly instead of
+  re-prompting in interactive mode. An invalid name still prompts.
+
 ## 0.1.0
 
 Initial release.
